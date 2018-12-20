@@ -1,0 +1,63 @@
+include _assets/bemto/bemto
+- set_bemto_settings({ modifier: "--" })
+
+include head/head
+include header/header
+include menu/menu
+include service/service
+include work/work
+include testimonial/testimonial
+include slider/slider
+include team/team
+
+
+doctype html
+html(lang="ru")
+
+	block head
+		head
+			+head({
+				"title": "Home Work",
+				"author": "Solowey",
+				"description": "Home Work"
+			})
+			
+		+b.BODY.page
+			+e.DIV.wrap
+				block header
+					+header()
+						+menu()
+
+				block service
+					+service()
+
+				block work
+					+work()
+
+				block testimonial
+					+testimonial()
+						+slider()
+
+				block team
+					+team()
+
+
+
+
+
+				block footer
+					footer footer
+				
+			block vendors
+				// build:js js/vendor.js
+				script( src="libs/jquery/dist/jquery.min.js")
+
+				// endbuild
+
+			block scripts
+				// build:js js/main.js
+				script( src="js/main.js")
+				script( src="js/snap.svg-min.js")
+				script( src="js/classie.js")
+				script( src="js/scripts.min.js")
+				// endbuild
