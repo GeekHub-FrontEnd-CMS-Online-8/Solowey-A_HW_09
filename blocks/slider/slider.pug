@@ -1,40 +1,13 @@
 mixin slider()
-    .sliderWrap
-        input#slide1(type='radio' name='slide' checked='')
-        input#slide2(type='radio' name='slide')
-        input#slide3(type='radio' name='slide')
-        .slider
-            .slides.slide1
-                p
-                    | Bebed pupu warni sangsam ngundang ajang, gujeng sirah lair menda bebucal benang; lek-lekan?
-                    | Madeg pendhet lenggah, "nanem dipetak dhuwung, dipun awis bokong ayam. gendhis angsal Jawa
-                    | Ipsum nangis rumput wilujeng unyeng-unyeng; pados gujeng benter andhap lisa Leres, lisah,
-                    | ulem-ulem nedhi gesang manah cangkem: nem aken benter bebucal baita dangu
-                img(src='img/adam.jpg' alt='')
-                h2 Vasily Nganu
-                h3 Dropbox Senior 	Developer
-
-            .slides.slide2
-                p
-                    | Bebed pupu warni sangsam ngundang ajang, gujeng sirah lair menda bebucal benang; lek-lekan?
-                    | Madeg pendhet lenggah, "nanem dipetak dhuwung, dipun awis bokong ayam. gendhis angsal Jawa
-                    | Ipsum nangis rumput wilujeng unyeng-unyeng; pados gujeng benter andhap lisa Leres, lisah,
-                    | ulem-ulem nedhi gesang manah cangkem: nem aken benter bebucal baita dangu
-                img(src='img/adam.jpg' alt='')
-                h2 Vasily Nganu
-                h3 Dropbox Senior 	Developer
-
-            .slides.slide3
-                p
-                    | Bebed pupu warni sangsam ngundang ajang, gujeng sirah lair menda bebucal benang; lek-lekan?
-                    | Madeg pendhet lenggah, "nanem dipetak dhuwung, dipun awis bokong ayam. gendhis angsal Jawa
-                    | Ipsum nangis rumput wilujeng unyeng-unyeng; pados gujeng benter andhap lisa Leres, lisah,
-
-                img(src='img/adam.jpg' alt='')
-                h2 Vasily Nganu
-                h3 Dropbox Senior 	Developer
-
-        .controls
-            label(for='slide1')
-            label(for='slide2')
-            label(for='slide3')
+    +b.DIV.carousel-container
+        +b.DIV.owl-carousel(id="owl-carousel")
+            +b.DIV.item
+                +e.P Bebed pupu warni sangsam ngundang ajang, gujeng sirah lair menda bebucal benang; lek-lekan?
+                    |Madeg pendhet lenggah, "nanem dipetak dhuwung, dipun awis bokong ayam. gendhis angsal
+                    |Jawa Ipsum nangis rumput wilujeng unyeng-unyeng; pados gujeng benter andhap lisa Leres,
+                    |lisah, ulem-ulem nedhi gesang manah cangkem: nem aken benter bebucal baita dangu
+                +e.IMG(src="img/adam.jpg" alt="adam")
+            +b.DIV.item
+                +e.IMG(src="img/adam.jpg" alt="adam")
+            +b.DIV.item
+                +e.IMG(src="img/adam.jpg" alt="adam")

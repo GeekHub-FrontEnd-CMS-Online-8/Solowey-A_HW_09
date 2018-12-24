@@ -1,4 +1,7 @@
 .team
+  display: flex
+  flex-direction: column
+  align-items: center
   padding: 100px 0
   background: linear-gradient(rgba(72,85,99,0.7) 0%, rgba(41,50,60,0.7) 100%),
   url(../img/team_bg.jpg) center center no-repeat / cover
@@ -7,9 +10,9 @@
     justify-content: center
     align-items: center
     flex-direction: column
-    h1
+    h2
       color: #e8e8e8
-      font-family: $title
+      font-family: $main-font
       font-size: 36px
       font-weight: 700
       text-align: center
@@ -22,22 +25,75 @@
       max-width: 625px
       text-align: center
       margin-bottom: 35px
+      font-family: $main-font
   &__wrap-container
+    margin-bottom: 90px
     +container()
+    justify-content: center
     .item
+      .photo
+        background: url("../img/team/salazar.jpg") no-repeat
+        height: 270px
+        width: 270px
+        transition: 0.3s
+        margin-bottom: 30px
+      .photo2
+        background: url("../img/team/gryffindor.jpg")
+        height: 270px
+        width: 270px
+        transition: 0.3s
+        margin-bottom: 30px
+      .photo3
+        background: url("../img/team/ravenclaw.jpg")
+        height: 270px
+        width: 270px
+        transition: 0.3s
+        margin-bottom: 30px
+      .photo4
+        background: url("../img/team/hufflepuff.jpg")
+        height: 270px
+        width: 270px
+        transition: 0.3s
+        margin-bottom: 30px
+
+      &:hover
+          .item__readMore
+            opacity: 0.9
+          .photo, .photo2, .photo3, .photo4
+            background-color: #4f4f4f
+            opacity: 0.6
+
       background-color: rgba(242,242,242,0.7)
       width: 270px
       display: flex
       flex-direction: column
       align-items: center
-      img
-        padding-bottom: 30px
-      &__h2
+      margin: 5px
+      cursor: pointer
+      position: relative
+      &__readMore
+        color: #e8e8e8
+        font-size: 13px
+        font-weight: 700
+        opacity: 0
+        position: absolute
+        top: 120px
+        left: 88px
+        &::after
+          content: ''
+          display: block
+          width: 40px
+          height: 2px
+          margin: 0 auto
+          background-color: #e8e8e8
+          margin-top: 15px
+
+      &__h3
         color: #29323c
         font-size: 15px
         font-weight: 700
         line-height: 20px
-
+        font-family: $title
 
       &__p
         opacity: 0.8
@@ -46,11 +102,44 @@
         font-weight: 400
         line-height: 20px
         padding-bottom: 30px
+        font-family: $title
       .social
         a
+          cursor: alias
+          color: #d2d2d2
+          background-color: black
           width: 24px
           height: 24px
           border: transparent
-          margin-bottom: 30px
+          margin: 1px
+            bottom: 30px
+          &:hover
+            .fa-twitter
+              color: #00acee
+            .fa-linkedin
+              color: #0e76a8
+            .fa-vimeo
+              color: #00acee
+            .fa-dribbble
+              color: #d52b2b
+            .fa-envelope-o
+              color: #ffffff
+
+  &__button
+    width: 200px
+    color: #e8e8e8
+    font-family: $title
+    font-size: 13px
+    font-weight: 700
+    line-height: 36px
+    text-transform: uppercase
+    letter-spacing: 0.33px
+    border: 1px solid #f2f2f2
+    border-radius: 50px
+    text-align: center
+    &:hover
+      box-shadow: 3px 3px 15px #e8e8e8
+
+
 
 

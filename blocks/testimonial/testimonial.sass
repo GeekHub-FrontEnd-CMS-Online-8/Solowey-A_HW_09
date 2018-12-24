@@ -1,4 +1,7 @@
 .testimonial
+  display: flex
+  flex-direction: column
+  justify-content: center
   padding: 100px 0
   &__title
     +container()
@@ -10,9 +13,12 @@
     line-height: 22px
     text-transform: uppercase
     padding-bottom: 15px
+    font-family: $main-font
   &__subtitle
     opacity: 0.8
     font-size: 14px
+    text-align: center
+    font-family: $main-font
     &::after
       content: ''
       display: block

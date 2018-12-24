@@ -1,0 +1,115 @@
++for-size(phone-only)
+  .inner
+    max-height: 400px
+    overflow-y: auto
+.pricing
+  padding: 100px 0
+  &__container
+    +container()
+    flex-direction: column
+    align-items: center
+    .inner
+      +container()
+      justify-content: center
+    .title
+      &__h2
+        color: #29323c
+        font-family: $main-font
+        font-size: 26px
+        font-weight: 800
+        line-height: 22px
+        text-transform: uppercase
+        letter-spacing: -0.65px
+        text-align: center
+        padding-bottom: 15px
+      &__p
+        opacity: 0.8
+        color: #29323c
+        font-family: $main-font
+        font-size: 14px
+        font-weight: 400
+        line-height: 30px
+        text-align: center
+        &::after
+          content: ''
+          display: block
+          width: 40px
+          height: 2px
+          background-color: #8b8b8b
+          opacity: 0.8
+          margin: 0 auto
+            top: 15px
+            bottom: 60px
+    .tick
+      border: 1px solid #dddddd
+      max-width: 380px
+      min-width: 320px
+      display: flex
+      flex-direction: column
+      align-items: center
+      padding: 35px 0
+      cursor: pointer
+      z-index: 2
+      transition: 0.4s
+      margin: 15px 0
+      &:hover
+        border-top: 4px solid #000000
+        transform: scaleY(1.1)
+
+      &__titles
+        border-bottom: 1px solid #dddddd
+        width: 100%
+        h3
+          color: #485563
+          font-family: $title
+          font-size: 20px
+          font-weight: 700
+          line-height: 36px
+          text-align: center
+          padding-bottom: 25px
+        h2
+          color: #485563
+          font-family: $title
+          font-size: 45px
+          font-weight: 400
+          line-height: 9px
+          text-align: center
+          padding-bottom: 25px
+        p
+          opacity: 0.8
+          color: #29323c
+          font-family: $main-font
+          font-size: 14px
+          font-weight: 300
+          line-height: 9px
+          text-transform: uppercase
+          text-align: center
+          padding-bottom: 30px
+      &__wrap
+        text-align: center
+        p
+          max-width: 250px
+          text-align: center
+          margin: 85px 0
+          color: #29323c
+          font-family: $main-font
+          font-size: 14px
+          font-weight: 400
+          line-height: 40px
+        a
+          text-align: center
+          background-color: #485563
+          color: #e8e8e8
+          font-family: $title
+          font-size: 13px
+          font-weight: 700
+          line-height: 36px
+          text-transform: uppercase
+          letter-spacing: 0.33px
+          padding: 10px 30px
+          border-radius: 50px
+          transition: 0.4s
+          &:hover
+            box-shadow: 3px 3px 10px #485563
+
+

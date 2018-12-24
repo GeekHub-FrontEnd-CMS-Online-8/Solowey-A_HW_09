@@ -2,15 +2,16 @@ mixin team()
   +b.DIV.team
     +e.SECTION.container
         +b.DIV.titles
-            +e.H1 Something Nothing
+            +e.H2 Something Nothing
             +e.P Enean vulput
 
 
 
     +e.DIV.wrap-container
       +b.DIV.item
-        +e.IMG(src="img/team/salazar.jpg")
-        +e.h2 Salazar Slytherin
+        +b.DIV.photo
+        +e.A.readMore(href="#") READ HIS BIO
+        +e.h3 Salazar Slytherin
         +e.p CEO
         +b.DIV.social
           +e.A(href="#")
@@ -24,9 +25,10 @@ mixin team()
           +e.A(href="#")
             i(class="fa fa-envelope-o")
       +b.DIV.item
-          +e.IMG(src="img/team/gryffindor.jpg")
-          +e.h2 Salazar Slytherin
-          +e.p CEO
+          +b.DIV.photo2
+          +e.A.readMore(href="#") READ HIS BIO
+          +e.h3 GodricT Gryffindor
+          +e.p Lead Developer
           +b.DIV.social
               +e.A(href="#")
                   i(class="fa fa-twitter")
@@ -39,8 +41,9 @@ mixin team()
               +e.A(href="#")
                   i(class="fa fa-envelope-o")
       +b.DIV.item
-            +e.IMG(src="img/team/ravenclaw.jpg")
-            +e.h2 Salazar Slytherin
+            +b.DIV.photo3
+            +e.A.readMore(href="#") READ HIS BIO
+            +e.h3 Salazar Slytherin
             +e.p CEO
             +b.DIV.social
                 +e.A(href="#")
@@ -54,8 +57,9 @@ mixin team()
                 +e.A(href="#")
                     i(class="fa fa-envelope-o")
       +b.DIV.item
-            +e.IMG(src="img/team/hufflepuff.jpg")
-            +e.h2 Salazar Slytherin
+            +b.DIV.photo4
+            +e.A.readMore(href="#") READ HIS BIO
+            +e.h3 Salazar Slytherin
             +e.p CEO
             +b.DIV.social
                 +e.A(href="#")
@@ -68,7 +72,7 @@ mixin team()
                     i(class="fa fa-dribbble")
                 +e.A(href="#")
                     i(class="fa fa-envelope-o")
-
+    +e.A.button(href="#") MEET OUR FULL TEAM
 
 
 

@@ -1,3 +1,9 @@
++for-size(phone-only)
+  .work
+    .gallery
+      height: 320px
+      overflow-y: auto
+
 .work
   padding-top: 100px
   &__title
@@ -10,9 +16,12 @@
     line-height: 22px
     text-transform: uppercase
     padding-bottom: 15px
+    font-family: $main-font
   &__subtitle
     opacity: 0.8
     font-size: 14px
+    text-align: center
+    font-family: $main-font
     &::after
       content: ''
       display: block
@@ -30,10 +39,38 @@
     flex-wrap: wrap
     justify-content: center
     align-items: center
-    &__img
-      width: 320px
-      height: 200px
-      display: block
+    position: relative
+    a
       cursor: pointer
+      background-color: black
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      .item
+        position: absolute
+
+
+      h2
+        text-align: center
+        color: #f2f2f2
+        font-size: 15px
+        font-weight: 700
+        line-height: 20px
+        opacity: 0
+        font-family: $title
+      p
+        text-align: center
+        color: #f2f2f2
+        font-size: 13px
+        font-weight: 400
+        line-height: 20px
+        opacity: 0
+        font-family: $title
       &:hover
-        background-color: rgba(72,85,99,0.5)
+        img
+          opacity: 0.6
+          transition: 0.4s
+        h2, p
+          opacity: 1
+

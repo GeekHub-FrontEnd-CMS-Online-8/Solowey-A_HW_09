@@ -9,55 +9,75 @@ include work/work
 include testimonial/testimonial
 include slider/slider
 include team/team
-
+include clients/clients
+include pricing/pricing
+include contacts/contacts
+include footer/footer
 
 doctype html
 html(lang="ru")
 
-	block head
-		head
-			+head({
-				"title": "Home Work",
-				"author": "Solowey",
-				"description": "Home Work"
-			})
-			
-		+b.BODY.page
-			+e.DIV.wrap
-				block header
-					+header()
-						+menu()
+    block head
+        head
+            +head({
+                "title": "Home Work",
+                "author": "Solowey",
+                "description": "Home Work"
+            })
 
-				block service
-					+service()
+        +b.BODY.page
+            +e.DIV.wrap
+                block header
+                    +header()
+                        +menu()
 
-				block work
-					+work()
+                block service
+                    +service()
 
-				block testimonial
-					+testimonial()
-						+slider()
+                block work
+                    +work()
 
-				block team
-					+team()
+                block testimonial
+                    +testimonial()
+                        +slider()
+
+                block team
+                    +team()
+
+                block clients
+                    +clients()
+
+                block pricing
+                    +pricing()
+
+                block contacts
+                    +contacts()
+
+                block footer
+                    +footer()
+
+
+
+
+            block vendors
+                // build:js js/vendor.js
+                script( src="libs/jquery/dist/jquery-1.9.1.min.js")
 
 
 
 
 
-				block footer
-					footer footer
-				
-			block vendors
-				// build:js js/vendor.js
-				script( src="libs/jquery/dist/jquery.min.js")
+                // endbuild
 
-				// endbuild
+            block scripts
+                // build:js js/main.js
 
-			block scripts
-				// build:js js/main.js
-				script( src="js/main.js")
-				script( src="js/snap.svg-min.js")
-				script( src="js/classie.js")
-				script( src="js/scripts.min.js")
-				// endbuild
+                script( src="js/snap.svg-min.js")
+                script( src="js/classie.js")
+                script( src="js/scripts.min.js")
+                script( src="js/main.js")
+                script( src="libs/owl-carousel/js/owl.carousel.js")
+                script( src="libs/owl-carousel/js/settings.js")
+                script( src="js/map.js")
+
+                // endbuild

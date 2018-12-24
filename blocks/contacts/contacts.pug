@@ -1,0 +1,15 @@
+mixin contacts()
+    +b.contacts
+        +e.DIV(id="map")
+            <script async defer src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap"></script>
+
+        +e.DIV.form
+            +b.FORM
+                label Name
+                    input(type="text")
+                label Email
+                    input(type="text")
+                label Phone
+                    input(type="text")
+                textarea(placeholder="Message")
+                button(class="btn") Submit
